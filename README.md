@@ -16,7 +16,7 @@ In order to interact with postgres from django setup psycopg2 :
 Default sqllite is good and comes with easy view dbbrowser but it doesnt have supports for concurrent bulk requests
 
 The project name is findfriends and app name is friend.
-The User objects in Model is default django.contrib.auth.models User class and is a simple bean. Further in Model we have our own custom friendship class which has 2 fields from_friend and to_friend. Say
+The User objects in Model is default django.contrib.auth.models User class and is a simple bean. Further in Model we have our own custom friendship class which has 2 fields of type User as from_friend and to_friend. Say
 
 open shell : python manage.py shell
 a) In order to create and push Users in DB just execute bulk_user_push.py :
@@ -32,7 +32,7 @@ python manage.py runserver
 
 hit browser with http://localhost:8000/admin/auth/user/ will list users list in django dashboard
 However our api exposed at friends with user id as param will return list of friends for that user as json:
-http://localhost:8000/friends/2/ (Make_friends code created 100 friends of User2)
+http://localhost:8000/friends/2/ (Make_friends code created user3 to user100 friends of User2)
 
 ![alt text](https://github.com/deeprajjha1/media/blob/master/friends_user2.png)
 
