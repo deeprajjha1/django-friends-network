@@ -24,30 +24,15 @@ a) In order to create and push Users in DB just execute bulk_user_push.py :
  
 b) In order to create friendship relationship just execute make_friends.py :
     from friends import make_friends.py (be careful of pwd). This will create a table called friends_friendship in database :
-    
-C:\PostgreSQL\11\bin>psql.exe -U djha -d testdb1
-psql (11.5)
-WARNING: Console code page (437) differs from Windows code page (1252)
-         8-bit characters might not work correctly. See psql reference
-         page "Notes for Windows users" for details.
-Type "help" for help.
 
-testdb1=> select * from friends_friendship;
- id  | from_friend_id | to_friend_id
------+----------------+--------------
-   1 |              2 |            3
-   2 |              2 |            4
-   3 |              2 |            5
-   4 |              2 |            6
-   5 |              2 |            7
-   6 |              2 |            8
-   7 |              2 |            9
-   
+![alt text](https://github.com/deeprajjha1/media/blob/master/friendshipTable.png)   
 
 Now start the server : 
 python manage.py runserver
 
-A simple get query to http://localhost:8000/admin/auth/user/ will list users list in django dashboard
-However our api exposed at friends with user id as param will return list of friends for that user as json
+hit browser with http://localhost:8000/admin/auth/user/ will list users list in django dashboard
+However our api exposed at friends with user id as param will return list of friends for that user as json:
+http://localhost:8000/friends/2/ (Make_friends code created 100 friends of User2)
 
+![alt text](https://github.com/deeprajjha1/media/blob/master/friends_user2.png)
 
