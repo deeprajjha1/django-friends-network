@@ -37,3 +37,9 @@ http://localhost:8000/friends/2/ (Make_friends code created user3 to user100 fri
 
 ![alt text](https://github.com/deeprajjha1/media/blob/master/friends_user2.png)
 
+Similarly there are few api's specific to view a particular user and the complete users list :
+http://localhost:8000/users/
+http://localhost:8000/users/23
+
+There are few base test cases added as well :
+python manage.py test
