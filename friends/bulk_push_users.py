@@ -1,4 +1,4 @@
-from quickstart import models
+from friends import models
 
 
 def orm_bulk_create(n_records):
